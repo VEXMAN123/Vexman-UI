@@ -94,5 +94,8 @@ VexmanUI is built with Tailwind CSS. You can customize styles via your Tailwind 
 3. Commit your changes
 4. Open a pull request
 
+## INSTALLATION
+<img width="626" height="223" alt="image" src="https://github.com/user-attachments/assets/3c71c8b1-a276-43db-b9c3-2bb1dec791f6" />
+
 ## License
-MIT
+
