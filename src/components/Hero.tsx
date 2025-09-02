@@ -14,7 +14,7 @@ export const Hero = () => {
           </div>
           
           <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-foreground via-foreground to-muted-foreground bg-clip-text text-transparent mb-6">
-            Next-Gen UI with
+            This is a Beta-Version customized UI with
             <br />
             <span className="gradient-primary bg-clip-text text-transparent">VexmanUI</span>
           </h1>
