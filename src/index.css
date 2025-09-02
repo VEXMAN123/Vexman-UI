@@ -1,0 +1,221 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* VexmanUI Design System - Modern, Sharp, Developer-First */
+
+@layer base {
+  :root {
+    /* Core dark palette */
+    --background: 216 28% 7%;
+    --foreground: 213 31% 91%;
+    
+    /* Surface colors */
+    --card: 216 28% 9%;
+    --card-foreground: 213 31% 91%;
+    --surface: 217 32% 12%; 
+    --surface-foreground: 213 31% 91%;
+    
+    /* Brand colors - Distinctive cyan/teal system */
+    --primary: 174 100% 41%;
+    --primary-foreground: 216 28% 7%;
+    --primary-hover: 174 100% 35%;
+    --primary-light: 174 100% 5%;
+    
+    /* Accent system - Sharp orange */
+    --accent: 31 100% 60%;
+    --accent-foreground: 216 28% 7%;
+    --accent-hover: 31 100% 55%;
+    
+    /* Secondary system */
+    --secondary: 217 32% 17%;
+    --secondary-foreground: 213 31% 91%;
+    --secondary-hover: 217 32% 22%;
+    
+    /* Semantic colors */
+    --success: 158 64% 51%;
+    --success-foreground: 216 28% 7%;
+    --warning: 43 96% 60%;
+    --warning-foreground: 216 28% 7%;
+    --destructive: 0 91% 71%;
+    --destructive-foreground: 216 28% 7%;
+    
+    /* Neutral system */
+    --muted: 217 32% 17%;
+    --muted-foreground: 215 20% 65%;
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 174 100% 41%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(174 100% 41%), hsl(31 100% 60%));
+    --gradient-secondary: linear-gradient(135deg, hsl(217 32% 17%), hsl(217 32% 12%));
+    --gradient-hero: linear-gradient(135deg, hsl(174 100% 41%) 0%, hsl(200 100% 50%) 50%, hsl(31 100% 60%) 100%);
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(216 28% 7% / 0.8);
+    --shadow-md: 0 4px 6px -1px hsl(216 28% 7% / 0.6), 0 2px 4px -1px hsl(216 28% 7% / 0.4);
+    --shadow-lg: 0 10px 15px -3px hsl(216 28% 7% / 0.4), 0 4px 6px -2px hsl(216 28% 7% / 0.2);
+    --shadow-primary: 0 8px 25px -8px hsl(174 100% 41% / 0.5);
+    
+    /* Component specific */
+    --popover: 216 28% 9%;
+    --popover-foreground: 213 31% 91%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .light {
+    /* Light mode - for those who prefer it */
+    --background: 0 0% 100%;
+    --foreground: 216 28% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 216 28% 12%;
+    --surface: 210 20% 98%;
+    --surface-foreground: 216 28% 12%;
+    --primary: 174 100% 35%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 174 100% 30%;
+    --primary-light: 174 100% 95%;
+    --secondary: 215 16% 94%;
+    --secondary-foreground: 216 28% 12%;
+    --secondary-hover: 215 16% 89%;
+    --muted: 215 16% 94%;
+    --muted-foreground: 215 13% 45%;
+    --border: 215 14% 89%;
+    --input: 215 14% 89%;
+    --ring: 174 100% 35%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 216 28% 12%;
+    --accent: 31 100% 50%;  
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 31 100% 45%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 158 64% 41%;
+    --success-foreground: 0 0% 100%;
+    --warning: 43 96% 50%;
+    --warning-foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Component utilities */
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .shadow-primary {
+    box-shadow: var(--shadow-primary);
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out forwards;
+  }
+  
+  .animate-slide-up {
+    animation: slide-up 0.8s ease-out forwards;
+  }
+  
+  .animate-scale-in {
+    animation: scale-in 0.4s ease-out forwards;
+  }
+  
+  /* Code block styling */
+  .code-block {
+    @apply bg-muted border border-border rounded-lg p-4 font-mono text-sm;
+  }
+  
+  /* Interactive elements */
+  .interactive-card {
+    @apply transition-all duration-200 hover:shadow-lg hover:-translate-y-1;
+  }
+  
+  .glass-effect {
+    @apply backdrop-blur-sm bg-background/80 border border-border/50;
+  }
+}
+
+@layer utilities {
+  /* Custom animations */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes gradient-shift {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 6s ease infinite;
+  }
+}
