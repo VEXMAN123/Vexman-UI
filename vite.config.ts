@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  // ...existing code...
+  base: "/Vexman-UI/",
   server: {
     host: "::",
     port: 8080,
@@ -20,22 +20,4 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  build: {
-    lib: {
-      entry: path.resolve(__dirname, 'src/index.ts'),
-      name: 'VexUI',
-      fileName: 'index',
-    },
-    rollupOptions: {
-      external: [
-        'react', 'react-dom'
-      ],
-      output: {
-        globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM',
-        },
-      },
-    },
-  }
 }));
