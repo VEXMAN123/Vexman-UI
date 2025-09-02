@@ -29,28 +29,7 @@ export const Hero = () => {
               npm install vexman-ui
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="group"
-              asChild
-            >
-              <a href="/docs">
-                <Code className="mr-2 h-4 w-4" />
-                Documentation
-              </a>
-            </Button>
-            <Button
-              variant="secondary"
-              size="lg"
-              className="group shadow-lg border-2 border-blue-700 bg-blue-900 text-white font-bold rounded-xl px-8 py-3 hover:bg-blue-800 hover:border-blue-800 transition-all duration-200 flex items-center gap-2"
-              asChild
-            >
-              <a href="/demos">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/></svg>
-                View Live Demos
-              </a>
-            </Button>
+
           </div>
           
           <div className="flex items-center justify-center gap-8 text-sm text-muted-foreground">
